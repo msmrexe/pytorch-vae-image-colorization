@@ -8,6 +8,13 @@ import torch
 import torch.optim as optim
 import logging
 
+# --- Add project root to sys.path ---
+# This allows imports from the 'src' directory
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+# -------------------------------------
+
 from src.config import *
 from src.utils import setup_logging, load_data_paths, save_loss_plot
 from src.dataset import get_dataloaders
