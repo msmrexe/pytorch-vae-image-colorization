@@ -7,6 +7,14 @@ import os
 import argparse
 import logging
 import sys
+
+# --- Add project root to sys.path ---
+# This allows imports from the 'src' directory
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+# -------------------------------------
+
 from src.config import KAGGLE_DATASET_URL, DATA_DIR
 from src.utils import setup_logging
 
