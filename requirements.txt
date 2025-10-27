@@ -1,0 +1,9 @@
+torch
+torchvision
+pandas
+matplotlib
+seaborn
+opencv-python-headless
+scikit-learn
+opendatasets
+tqdm
